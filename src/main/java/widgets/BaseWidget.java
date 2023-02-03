@@ -1,2 +1,4 @@
-package widgets;public class BaseWidget {
+package widgets;
+
+public class BaseWidget {
 }
