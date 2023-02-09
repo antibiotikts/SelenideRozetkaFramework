@@ -3,8 +3,9 @@ package pages;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+
+import static com.codeborne.selenide.Selenide.*;
+import static resources.MyCondition.elementExists;
 
 public class BasketPage {
     private final By productCart = By.xpath("//div[@class='cart-product__body']");
@@ -31,6 +32,11 @@ public class BasketPage {
     }
 
     public void closeBasket() {
-        $(close).click();
+        if(elementExists(close)) {
+            $(close).click();
+        }
+        else {
+            back();
+        }
     }
 }

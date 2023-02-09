@@ -2,12 +2,11 @@ package widgets.sidebar;
 
 import com.codeborne.selenide.SelenideElement;
 import pages.ProductsPage;
-import widgets.BaseWidget;
 
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 
-public class SortingSidebar extends BaseWidget {
+public class SortingSidebar {
     private final SelenideElement sortingSidebar = $(byXpath("//rz-filter-stack[@class='ng-star-inserted']"));
 
     public ProductsPage sortBySalesman() {
