@@ -1,11 +1,13 @@
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
+
+import static com.codeborne.selenide.Selenide.open;
 
 public class RozetkaTest extends BaseTest {
 
     @Test
-    @Disabled
     public void catalogSearchTest() {
         header
                 .openHeaderCatalog()
@@ -17,18 +19,8 @@ public class RozetkaTest extends BaseTest {
                 .cleanBasket()
                 .closeBasket();
     }
-    @Test
-    public void loginTest() {
-        header
-                .openHeaderLogin()
-                .enterEmail("login@gmail.com")
-                .enterPassword("Password")
-                .closeLoginPage();
-    }
-
 
     @Test
-    @Disabled
     public void searchInputTest() {
         header
                 .headerSearchInput("iphone")
@@ -37,37 +29,5 @@ public class RozetkaTest extends BaseTest {
                 .openHeaderBasket()
                 .cleanBasket()
                 .closeBasket();
-    }
-
-    @Test
-    @Disabled
-    public void sortingTest() {
-        header
-                .headerSearchInput("Кросовки")
-                .sorting("Nike")
-                .sorting("Adidas")
-                .openProduct()
-                .addOnBasket();
-    }
-
-    @Test
-    public void comparisonTest() {
-        header
-                .headerSearchInput("Стол")
-                .openProduct()
-                .addOnComparison()
-                .openHeaderComparison()
-                .openComparisonPage();
-    }
-
-    @Test
-    public void comparisonCleanTest() {
-        header
-                .headerSearchInput("Носки")
-                .openProduct()
-                .addOnComparison()
-                .openHeaderComparison()
-                .cleanComparison()
-                .closeComparisonPopup();
     }
 }
