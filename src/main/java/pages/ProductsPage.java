@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -14,6 +15,7 @@ public class ProductsPage extends Header {
     private final SelenideElement sortingSidebar = $(byXpath("//rz-filter-stack[@class='ng-star-inserted']"));
     private final SelenideElement sortingSelect = $(byXpath("//select[@class='select-css ng-untouched ng-pristine ng-valid ng-star-inserted']"));
     private final SelenideElement product = $(byClassName("goods-tile__inner"));
+    private final SelenideElement productTab = $(byXpath("//rz-tabs[@class='product-tabs']"));
 
     public ProductsPage sortBySalesman() {
         sortingSidebar.find(byXpath(".//a[contains(@href, 'seller=rozetka')]")).click();
@@ -33,6 +35,7 @@ public class ProductsPage extends Header {
 
     public ProductPage openProduct() {
         product.click();
+        productTab.should(Condition.visible);
         return new ProductPage();
     }
 }

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="377d3684-1d69-4fe2-bbc1-88f428bfd246" name="Changes" comment="added test parallelization" />
+    <list default="true" id="377d3684-1d69-4fe2-bbc1-88f428bfd246" name="Changes" comment="test parallelization off">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ProductsPage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +65,30 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.Tests in 'SelenideRozetkaFramework.test'">
+  <component name="RunManager" selected="Gradle.RozetkaSortTest">
+    <configuration name="RozetkaSortTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;RozetkaSortTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="RozetkaSortTest.sortingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -132,29 +158,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RozetkaTest.sortingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;RozetkaTest.sortingTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="Tests in 'SelenideRozetkaFramework.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -178,16 +181,17 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.Test" />
+      <item itemvalue="Gradle.RozetkaSortTest" />
       <item itemvalue="Gradle.RozetkaSortTest.sortingTest" />
       <item itemvalue="Gradle.Tests in 'SelenideRozetkaFramework.test'" />
       <item itemvalue="Gradle.RozetkaTest.comparisonCleanTest" />
       <item itemvalue="Gradle.RozetkaTest.comparisonTest" />
-      <item itemvalue="Gradle.RozetkaTest.sortingTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'SelenideRozetkaFramework.test'" />
+        <item itemvalue="Gradle.RozetkaSortTest" />
         <item itemvalue="Gradle.RozetkaSortTest.sortingTest" />
+        <item itemvalue="Gradle.Tests in 'SelenideRozetkaFramework.test'" />
         <item itemvalue="Gradle.RozetkaTest.comparisonCleanTest" />
         <item itemvalue="Gradle.RozetkaTest.comparisonTest" />
       </list>
@@ -223,13 +227,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676468714484</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test parallelization off">
+      <created>1676475104701</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676475104701</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="added test parallelization" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test parallelization" />
+    <MESSAGE value="test parallelization off" />
+    <option name="LAST_COMMIT_MESSAGE" value="test parallelization off" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

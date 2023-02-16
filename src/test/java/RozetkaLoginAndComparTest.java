@@ -1,8 +1,10 @@
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class RozetkaLoginAndComparTest extends BaseTest{
 
     @Test
+    @DisplayName("Ввод логина и пароля")
     public void loginTest() {
         header
                 .openHeaderLogin()
@@ -12,6 +14,7 @@ public class RozetkaLoginAndComparTest extends BaseTest{
     }
 
     @Test
+    @DisplayName("Добавление товара в сравнение")
     public void comparisonTest() {
         header
                 .headerSearchInput("Стол")
@@ -22,6 +25,7 @@ public class RozetkaLoginAndComparTest extends BaseTest{
     }
 
     @Test
+    @DisplayName("Очистка товаров в 'сравнении'")
     public void comparisonCleanTest() {
         header
                 .headerSearchInput("Носки")
